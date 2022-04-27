@@ -1,11 +1,11 @@
 from unittest import TestCase
-import negocio.adivina_el_numero as negocio
+import negocio.juego as negocio
 
 # Ale
 # estan vendo eso?
 # Esto acáááá Quando tipeo acá vees ahsiiiiiiiiiiiiiiiiiiiiii ;) í@
 
-class testeDeExemplo(TestCase):
+class testsDelJuego(TestCase):
 
     def test_jugando_valor_elegido_4_valor_correcto_4_resultado_esperado_Ok(self):
         # Arrange
@@ -14,7 +14,7 @@ class testeDeExemplo(TestCase):
         resultado_esperado = "Ok"
 
         # Act        
-        resultado = negocio.juego(valor_correcto,valor_elegido)
+        resultado = negocio.jugar(valor_correcto,valor_elegido)
 
         # Assert
         self.assertEqual(resultado_esperado, resultado)
@@ -26,7 +26,7 @@ class testeDeExemplo(TestCase):
         resultado_esperado = "Incorrecto"
 
         # Act        
-        resultado = negocio.juego(valor_correcto,valor_elegido)
+        resultado = negocio.jugar(valor_correcto,valor_elegido)
 
         # Assert
         self.assertEqual(resultado_esperado, resultado)
