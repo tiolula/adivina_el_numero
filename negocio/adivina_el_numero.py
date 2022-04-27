@@ -1,16 +1,22 @@
 import random
 import pickle
 
-def juego(a, b):
+def jugar(a, b):
    if a == b:
       return "Ok"
    else: 
       return 'Incorrecto'
 
-def nuevo_juego():
-   numero_secreto = random.randint(1, 9)
+def eligir_numero_secreto():
+   numero_secreto = random.randint(0,9)
+   guardar_numero_secreto(numero_secreto)
+
+def guardar_numero_secreto(numero_secreto):
    pickle.dump(numero_secreto, open( "secret_number.txt", "wb") )
 
-def jugar(conjectura):
-   numero_secreto = pickle.load(open( "secret_number.txt", "rb") )
-   return juego(numero_secreto, int(conjectura))
+def cargar_numero_secreto():
+   return pickle.load(open( "secret_number.txt", "rb") )
+
+def intentar_adivinar(conjectura):
+   numero_secreto = cargar_numero_secreto()
+   return jugar(numero_secreto, int(conjectura))
