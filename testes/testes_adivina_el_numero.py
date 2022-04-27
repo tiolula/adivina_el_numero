@@ -23,7 +23,7 @@ class testeDeExemplo(TestCase):
         # Arrange
         valor_elegido = 5   
         valor_correcto = 4
-        resultado_esperado = "incorrecto"
+        resultado_esperado = "Incorrecto"
 
         # Act        
         resultado = negocio.juego(valor_correcto,valor_elegido)
