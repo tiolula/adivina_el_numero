@@ -1,0 +1,1 @@
+from negocio.app import app
