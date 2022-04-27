@@ -1,6 +1,6 @@
 from flask import Flask, escape, request
 
-import negocio.adivina_el_numero as juego
+import negocio.juego as juego
 
 app = Flask(__name__)
 
